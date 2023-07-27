@@ -57,7 +57,7 @@ class Server:
             data = []
         return data
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """
         Returns a page of the dataset.
         Args:
