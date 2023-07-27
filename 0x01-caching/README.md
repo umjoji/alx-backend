@@ -149,3 +149,27 @@ class LFUCache(BaseCaching):
     """
     Caching system that uses Least Frequency Used (LFU) algorithm.
     Inherits from BaseCaching
+
+ and uses a dictionary as cache_data.
+    """
+
+    def __init__(self):
+        super().__init__()
+
+    def put(self, key, item):
+        """
+        Assigns the item value for the key key in the cache_data dictionary.
+        If key or item is None, this method does nothing.
+        If the number of items in cache_data is higher than BaseCaching.MAX_ITEMS,
+        the least frequency used item (LFU algorithm) is discarded and printed as DISCARD.
+        If there are multiple items with the same least frequency, the LRU algorithm is used to discard the least recently used.
+        """
+        # Add your implementation here
+
+    def get(self, key):
+        """
+        Returns the value in cache_data linked to key.
+        If key is None or if the key doesn't exist in cache_data, return None.
+        """
+        # Add your implementation here
+```
