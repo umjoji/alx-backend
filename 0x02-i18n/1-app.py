@@ -7,9 +7,7 @@ from flask_babel import Babel
 
 
 class Config(object):
-    """
-    Configuration for Babel
-    """
+    """Configuration for Babel."""
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
@@ -22,11 +20,9 @@ babel = Babel(app)
 
 @app.route('/', strict_slashes=False)
 def index() -> str:
-    """
-    Handles / route
-    """
+    """Handle route."""
     return render_template('1-index.html')
 
 
 if __name__ == "__main__":
-    app.run(port="5000", host="0.0.0.0", debug=True)
+    app.run(port=5000, host="0.0.0.0", debug=True)
